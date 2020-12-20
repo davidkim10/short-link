@@ -15,14 +15,12 @@ const SplashScreen = () => {
         <div className="jumbotron-cta">
           <button
             className="button ui primary big"
-            style={{ marginBottom: '.75rem' }}
+            style={{ marginBottom: '2rem' }}
           >
             <Link to="/signup">Create a Free Account</Link>
           </button>
           <p>
-            <em>
-              Already have an account? <Link to="/login">Login</Link>
-            </em>
+            <Link to="/login">Already have an account? Login</Link>
           </p>
         </div>
       </div>
