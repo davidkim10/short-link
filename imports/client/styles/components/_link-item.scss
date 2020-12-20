@@ -1,0 +1,111 @@
+.link-item {
+  background: $item-bg;
+  margin-bottom: $space;
+  box-shadow: 0 1px 3px 1px #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.link-item--emptystate {
+  text-align: center;
+
+  .link-item-body {
+    align-items: center;
+    justify-content: center;
+
+    > span {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+  }
+}
+
+.link-item-header {
+  align-items: center;
+  background: $brand-secondary;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+
+  .button.ui.standard {
+    background: transparent;
+    color: #fff;
+    padding: 0 0 0 0.75rem;
+    font-size: 10px;
+  }
+
+  .title {
+    font-weight: 300;
+    overflow: hidden;
+    margin-bottom: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.link-item-body {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  .text-wrapper {
+    overflow: hidden;
+    flex-grow: 1;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .subTitle {
+      color: #888;
+      display: block;
+      font-size: 12px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.link-item-footer {
+  padding: 0.5rem 1rem;
+  border-top: solid 1px #eee;
+}
+
+.visit-metrics {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    font-size: 12px;
+    list-style-type: none;
+  }
+}
+
+.link-item__message {
+  color: $item-text-color;
+}
+
+.link-item__status-message {
+  color: $item-text-color;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .link-item-body {
+    .text-wrapper {
+      .title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

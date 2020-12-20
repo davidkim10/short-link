@@ -1,0 +1,50 @@
+.modal {
+  width: 100%;
+
+  &.modal--sm {
+    max-width: 30rem;
+  }
+
+  &.modal--md {
+    max-width: 40rem;
+  }
+
+  &.modal--lg {
+    max-width: 50rem;
+  }
+
+  &.modal--fluid {
+    max-width: 100%;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.modal-overlay {
+  background: fade-out($brand-secondary, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  width: 30rem;
+}
+
+.boxed-view__form {
+  display: flex;
+  flex-direction: column;
+}

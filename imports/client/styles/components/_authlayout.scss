@@ -1,0 +1,59 @@
+.auth-layout {
+  align-items: center;
+  background: $brand-secondary;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 1rem;
+  .form {
+    width: 100%;
+
+    margin-bottom: 2rem;
+  }
+
+  .auth-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: $brand-secondary;
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .auth-subTitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #fff;
+    border: solid 2px #f8f8f8;
+    border-radius: 4px;
+  }
+
+  .logo img {
+    max-width: 60px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// Mobile Alternate Styles
+@media screen and (max-width: 576px) {
+  .auth-layout {
+    align-items: center;
+    display: flex;
+    background: #fff;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    justify-content: center;
+    padding: 1rem;
+
+    .container {
+      border: none;
+    }
+  }
+}

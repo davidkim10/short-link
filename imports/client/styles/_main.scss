@@ -1,8 +1,12 @@
 @import './variables';
-@import './base';
-@import './components/boxed-view';
+// @import './base';
+@import './components/authlayout';
+@import './components/add-link-form';
+@import './components/dashboard';
+@import './components/link-item';
+@import './components/modal';
 @import './components/button';
+@import './components/add-link-form';
 @import './components/titlebar';
 @import './components/page-content';
 @import './components/checkbox';
-@import './components/item';
