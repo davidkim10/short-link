@@ -1,47 +1,80 @@
 import React from 'react';
-import {Link} from 'react-router';
-import {Meteor} from 'meteor/meteor';
+import AuthLayout from './Layouts/AuthLayout';
+import { Link } from 'react-router';
+import { Meteor } from 'meteor/meteor';
 
 export default class Login extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: ''
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: '',
+      hideErrorWrapper: false,
+    };
+    console.log(this.state);
+  }
 
-    onSubmit(e) {
-        e.preventDefault();
-        let email = this.refs.email.value.trim();
-        let password = this.refs.password.value.trim();
-        
-        Meteor.loginWithPassword({email}, password, (err)=> {
-          if(err) {
-              this.setState({
-                  error: "Unable to login. Check email and password."
-              });
-          } else {
-              this.setState({
-                  error: ""
-              });
-          }
+  handleErrorDismiss = () => {
+    this.setState({
+      hideErrorWrapper: true,
+    });
+  };
+  onSubmit(e) {
+    e.preventDefault();
+    const email = this.refs.email.value.trim();
+    const password = this.refs.password.value.trim();
+
+    Meteor.loginWithPassword({ email }, password, (err) => {
+      if (err) {
+        this.setState({
+          error: 'Unable to login. Check email and password.',
         });
-    }
+      } else {
+        this.setState({
+          error: '',
+        });
+      }
+    });
+  }
 
-    render() {
-        return (
-            <div className="boxed-view">
-                <div className="boxed-view__box">
-                    <h1>Short Link</h1>
-                    {this.state.error ? <p>{this.state.error}</p> : undefined}
-                    <form action="" onSubmit={this.onSubmit.bind(this)} className="boxed-view__form">
-                        <input type="email" name="email" ref="email" placeholder="Email Address" />
-                        <input type="password" name="password" ref="password" placeholder="Password" />
-                        <button className="button">Login</button>
-                    </form>
-                    <Link to="/signup">Need an account?</Link>
-                </div>
+  render() {
+    return (
+      <div>
+        <AuthLayout
+          errorMessage={this.state.error}
+          title="LOGIN"
+          subTitle="Please login below with your email"
+        >
+          <form
+            action=""
+            onSubmit={this.onSubmit.bind(this)}
+            className="login-form ui form"
+          >
+            <div className="field">
+              <input
+                type="email"
+                name="email"
+                ref="email"
+                placeholder="Email Address"
+              />
             </div>
-        );
-    }
+
+            <div className="field">
+              <input
+                type="password"
+                name="password"
+                ref="password"
+                placeholder="Password"
+              />
+            </div>
+
+            <div className="field">
+              <button className="ui button fluid large blue">LOGIN</button>
+            </div>
+          </form>
+
+          <Link to="/signup">Need an Account? Register</Link>
+        </AuthLayout>
+      </div>
+    );
+  }
 }
