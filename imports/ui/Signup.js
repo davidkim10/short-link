@@ -97,7 +97,7 @@ export default class Signup extends React.Component {
             </button>
           </div>
         </form>
-        <Link to="/">Already have an account? Login.</Link>
+        <Link to="/signup">Already have an account? Login.</Link>
       </AuthLayout>
     );
   }
