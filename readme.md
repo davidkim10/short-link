@@ -1,6 +1,6 @@
 ![](./public/img/og-image.png)
 
-### Bridged App
+## Bridged App
 
 Bridged is a link shortener application that will redirect long website URLs. Project was built with Meteor, ReactJS, and MongoDB.
 
