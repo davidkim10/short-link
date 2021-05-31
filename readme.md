@@ -6,6 +6,11 @@ Bridged is a link shortener application that will redirect long website URLs. Pr
 
 [View Live Demo](https://bridged-app.herokuapp.com/)
 
+Create an account or use the credentials below to explore the application.
+
+* Username: test@test.com
+* Password: password
+
 ## 🚀 Quick start
 
 1.  **Project Setup**
